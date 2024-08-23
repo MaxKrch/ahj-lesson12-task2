@@ -1,3 +1,190 @@
 * {
-	background-color: rgb(0 155 0);
+	margin: 0;
+	padding: 0;
+	font-size: 18px;	
+	list-style-type: none;
+	box-sizing: border-box;
+}
+
+body {
+	background-image: url('../img/bg.jpg');
+	background-size: cover;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+}
+
+.container {
+	min-width: 350px;
+	max-width: 1200px;
+	width: 90%;
+	margin: auto;
+}
+
+.upload-manager__title {
+	padding: 0.5rem;
+	font-size: 1.5rem;
+}
+
+.upload-manager__form {
+	padding: 0.5rem;	
+	background-color: rgb(255 255 255 / 0.95);
+	box-shadow: 0 0 3px 1px rgb(125 125 125 / 0.25);
+	border-radius: 0.2rem;
+}
+
+.upload-manager__form__dnd {
+	border: 1px solid rgb(125 125 125 / 0.5);
+	border-radius: 0.2rem;
+	display: inline-block;
+	height: 150px;	
+	width: 100%;
+}
+
+.upload-manager__form__dnd__area {
+	display: flex;	
+	height: 100%;	
+	width: 100%;	
+	flex-direction: column;
+	justify-content: center;
+	align-content: center;
+}
+
+.upload-manager__form__dnd__area:hover {
+	cursor: pointer;
+	background-color: rgb(225 225 225);
+}
+
+.upload-manager__form__dnd__area_active {
+	cursor: pointer;
+	background-color: rgb(225 225 225);
+}
+
+.upload-manager__form__dnd__area-p {
+	text-align: center;
+	font-size: 1.2rem;	
+	font-style: italic;
+	color: rgb(125 125 125);
+	padding: 0.25rem;	
+}
+
+.upload-manager__form__algorithms {
+	display: flex;
+	margin: 0.5rem 0;
+	position: relative;
+}
+
+.upload-manager__form__algorithms__title {
+	padding: 0.25rem 0;
+	width: 9rem;
+	font-weight: 700;
+}
+
+.upload-manager__form__algorithms__value {
+	padding: 0.25rem 0.5rem;
+	border: 1px solid transparent;
+	border-radius: 0.2rem;
+	cursor: pointer;
+	position: relative;
+	min-width: 5rem;
+}
+
+.upload-manager__form__algorithms__value:before {
+	position: absolute;
+	content: '';
+	right: -1.5rem;
+	background-color: rgb(0 225 0);
+	height: 1.25rem;
+	width: 1.25rem;
+	clip-path: polygon(0 10%, 100% 10%, 50% 90%);
+	transition: 0.5s;
+}
+
+.upload-manager__form__algorithms__value_show-list:before {
+	background-color: rgb(225 0 0);
+	transform: rotate3d(1, 0, 0, 180deg);
+	transition: 0.5s;
+}
+
+.upload-manager__form__algorithms__value:hover {
+	border-color: rgb(125 125 125 / 0.25);
+	background-color: rgb(215 215 215);
+}
+
+.upload-manager__form__algorithms__value_active {
+	border-color: rgb(125 125 125 / 0.25);
+	background-color: rgb(215 215 215);
+}
+
+.upload-manager__form__algorithms__list {
+	box-shadow: 0 0 1px 1px rgb(125 125 125 / 0.25);
+	border-radius: 0.2rem;
+	position: absolute;
+	background-color: rgb(255 255 255);
+	left: 9rem;
+	top: 100%;
+}
+
+.upload-manager__form__algorithms__item {
+	padding: 0.25rem 0.5rem;
+	cursor: pointer;
+	min-width: 5rem;
+	border: none;
+}
+
+.upload-manager__form__algorithms__item:hover {
+	background-color: rgb(240 240 240);
+}	
+
+.upload-manager__form__algorithms__item__label {
+	cursor: pointer;
+}
+
+.upload-manager__form__algorithms__item_active  {
+	background-color: rgb(225 225 225);
+}
+
+.upload-manager__info {
+	padding: 0.5rem;
+}
+
+.upload-manager__info__block {
+	display: flex;
+	align-items: flex-end;
+}
+
+.upload-manager__info__title {
+	width: 9rem;
+	font-weight: 700;
+}
+
+.upload-manager__info__value {
+	padding: 0 0.5rem;
+	font-size: 0.9rem;
+	vertical-align: bottom;
+}
+
+.upload-manager__info__hash {
+	margin-top: 0.5rem;
+}
+
+.hidden-item {
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 0;
+	width: 0;
+	clip-path: circle(0);
+}
+
+@media(max-width: 900px) and (min-width: 601px) {
+	* {	
+			font-size: 16px;
+	}
+}
+
+@media(max-width:600px) {
+	* {
+		font-size: 14px;
+	}
+
 }

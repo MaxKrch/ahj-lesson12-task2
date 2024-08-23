@@ -1,0 +1,270 @@
+
+ДОБАВИТЬ (!!!)
+
+На клик по инпуту списка запрет ан всплытие (чтобы не дублировался евент)
+stopPropagation()
+
+
+
+
+После добавления файла - 
+	создается воркер, 
+	отпарвляется ссылка на файл и метод хэширования (из дата аттрибута? А в дата аттрибут - добавляется при выборе?)
+
+	добавляется сообщение - считаю хэш (с добавлением точек к концу сооьщения( => . => .. => ... => ) каждые 100 милисексунд)
+
+Когда хэш посчитан - добавляестя его значение
+
+
+
+
+Если добавлен новый файл - 
+	старый воркер учничтожается
+	сообще - считаю хэш дял нового файла
+
+Если выбран новый хэш -
+	меняется хэш в дата аттрибуте 
+	если есть активный воркер - 
+			он уничтождается, 
+	если есть файл в инпуте(input.files.length > 0) 
+			сообщение - считаю новый хэш джля файла
+
+
+
+Далее - повтоярестя первый пункт
+
+const app = document.queryalgorithmsor('ul');
+const input = document.queryalgorithmsor('.form-dnd__input');
+
+app.addEventListener('click', event => {
+	console.log(event.target)
+})
+
+const list = document.queryalgorithmsor('.upload-manager__form__algorithms__list');
+const block = document.queryalgorithmsor('.upload-manager__form__algorithms')
+const but = document.queryalgorithmsor('.upload-manager__form__algorithms__value');
+
+let timer = null;
+but.addEventListener('mouseover', () => {
+	if(!timer) {
+		list.classList.remove('hidden-item');
+	
+	}
+
+})
+
+block.addEventListener('click', () => {
+	list.classList.add('hidden-item')	
+	timer = setTimeout(() => {
+		timer = null
+	}, 500)
+})
+
+
+ДОБАВИТЬ (!!!)
+
+На клик по инпуту списка запрет ан всплытие (чтобы не дублировался евент)
+stopPropagation()
+
+document.addEventListener("dragover", (event) => {
+	event.preventDefault();
+		});
+	
+this.sectionAddImg.addEventListener("drop", (event) => {
+
+	event.preventDefault();
+
+		<main 
+			class="container upload-manager">
+			
+			<h2 
+				class="upload-manager__title">
+					Hasher
+			</h2>
+			
+			<form 
+				action="#" 
+				class="upload-manager__form" 
+				method="POST" 
+				data-id="uploadManagerForm">
+				
+				<label 
+					class="upload-manager__form__dnd" 
+					data-id="uploadFormDnd">
+					
+					<input 
+						data-algorithm="md5" 
+						type="file"
+						data-id="uploadManagerFormDndInput" 
+						class="upload-manager__form__dnd__input hidden-item">
+					
+					<div 
+						class="upload-manager__form__dnd__area">
+						
+						<p 
+							class="upload-manager__form__dnd__area-span">
+								Drop file here
+						</p>
+						
+						<p 
+							class="upload-manager__form__dnd__area-span">
+								Or
+						</p>
+						
+						<p 
+							class="upload-manager__form__dnd__area-span">
+								Click to algorithms
+						</p>
+					</div>
+				</label>
+
+				<div 
+					class="upload-manager__form__algorithms">
+					
+					<div 
+						class="upload-manager__form__algorithms__title">
+							Hash Algorithm:
+					</div>
+					
+					<div 
+						class="upload-manager__form__algorithms__value 1upload-manager__form__algorithms__value_show-list" 
+						data-algorithm="sha512"
+						data-id="uploadManagerFormalgorithmsValue">
+							SHA512
+					</div>
+					
+					<ul 
+						class="upload-manager__form__algorithms__list hidden-item" 
+						data-id="uploadManagerFormalgorithmsList">
+						
+						<li 
+							class="upload-manager__form__algorithms__item"
+							data-algorithm="md5"
+							data-name="uploadManagerFormalgorithmsItem" 
+							data-id="uploadManagerFormalgorithmsItemMD5">
+							
+							<label 
+								class="upload-manager__form__algorithms__item__label">
+
+								<input 
+									class="upload-manager__form__algorithms__item__input hidden-item" 
+									name="hash-algorithm" 
+									type="radio" 
+									value="md5" 
+									data-name="uploadManagerFormalgorithmsItemInput" 
+									data-id="uploadManagerFormalgorithmsItemInputMD5">
+								
+								<p 
+									class="upload-manager__form__algorithms__item__text" 
+									data-name="uploadManagerFormalgorithmsItemText" 
+									data-id="uploadManagerFormalgorithmsItemTextMD5">
+										MD5
+								</p>
+							</label>
+						</li>
+							
+						<li 
+							class="upload-manager__form__algorithms__item" 
+							data-algorithm="sha1"
+							data-name="uploadManagerFormalgorithmsItem" 
+							data-id="uploadManagerFormalgorithmsItemSHA1">
+
+							<label 
+								class="upload-manager__form__algorithms__item__label">
+
+								<input 
+									class="upload-manager__form__algorithms__item__input hidden-item" 
+									name="hash-algorithm" 
+									type="radio" 
+									value="sha1" 
+									data-name="uploadManagerFormalgorithmsItemInput" 
+									data-id="uploadManagerFormalgorithmsItemInputSHA1">
+								
+								<p 
+									class="upload-manager__form__algorithms__item__text" 
+									data-name="uploadManagerFormalgorithmsItemText" 
+									data-id="uploadManagerFormalgorithmsItemTextSHA1">
+										SHA1
+								</p>
+							</label>
+						</li>
+
+						<li 
+							class="upload-manager__form__algorithms__item upload-manager__form__algorithms__item_active" 
+							data-algorithm="sha256"
+							data-name="uploadManagerFormalgorithmsItem" 
+							data-id="uploadManagerFormalgorithmsItemSHA256">
+
+							<label 
+								class="upload-manager__form__algorithms__item__label">
+
+								<input 
+									class="upload-manager__form__algorithms__item__input hidden-item" 
+									name="hash-algorithm" 
+									type="radio" 
+									value="sha256" 
+									data-name="uploadManagerFormalgorithmsItemInput"
+									data-id="uploadManagerFormalgorithmsItemInputSHA256">
+								
+								<p 
+									class="upload-manager__form__algorithms__item__text" 
+									data-name="uploadManagerFormalgorithmsItemText" 
+									data-id="uploadManagerFormalgorithmsItemTextSHA256">
+										SHA256
+								</p>
+							</label>
+						</li>
+
+						<li 
+							class="upload-manager__form__algorithms__item"
+							data-algorithm="sha512" 
+							data-name="uploadManagerFormalgorithmsItem" 
+							data-id="uploadManagerFormalgorithmsItemSHA512">
+
+							<label 
+								class="upload-manager__form__algorithms__item__label">
+
+								<input 
+									class="upload-manager__form__algorithms__item__input hidden-item" 
+									name="hash-algorithm" 
+									type="radio" 
+									value="sha512" 
+									data-name="uploadManagerFormalgorithmsItemInput" 
+									data-id="uploadManagerFormalgorithmsItemInputSHA512">
+
+								<p class="upload-manager__form__algorithms__item__text" 
+									data-name="uploadManagerFormalgorithmsItemText" 
+									data-id="uploadManagerFormalgorithmsItemTextSHA512">
+										SHA512
+								</p>
+							</label>
+						</li>						
+					</ul>
+				</div>
+			</form>
+
+			<div 
+				class="upload-manager__info" 
+				data-id="uploadManagerInfo">
+
+				<div 
+					class="upload-manager__info__block upload-manager__info__file" 
+					data-id="uploadManagerInfoFile">
+
+					<p class="upload-manager__info__title upload-manager__info__file__title">
+						File Name:
+					</p>
+					<p class="upload-manager__info__value upload-manager__info__file__value" data-id="infoFile">
+						Here Name Image
+					</p>
+				</div>
+				<div class="upload-manager__info__block upload-manager__info__hash" data-id="infoHash">
+					<p class="upload-manager__info__title upload-manager__info__hash__title">
+						File Hash:
+					</p>
+					<p class="upload-manager__info__value upload-manager__info__hash__value" data-id="infoHash">
+						255fd5fd5f5fd5fdf4f5d
+					</p>
+				</div>
+			</div>
+		</main>
